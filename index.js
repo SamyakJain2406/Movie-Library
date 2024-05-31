@@ -47,7 +47,7 @@ app.use(session({
     },
     store : MongoStore.create(
         {
-            mongoUrl : 'mongodb+srv://samyakjain:samyakjain24@cluster0.ltipixb.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0',
+            mongoUrl : process.env.MONGODB_URL, 
             autoRemove : 'disabled'
         },function(err){
             console.log(err || "Connection is fine");
